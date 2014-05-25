@@ -3,3 +3,4 @@
 3. The URL for mobile code activation is of the format - http://localhost/p2sme/p2sme/index.php?r=mobileActivation/mvalidate&id=#id#
 4. MySQL schema - https://github.com/ssprasad/p2sme/blob/master/p2sme/protected/data/schema.mysql.sql
 5. Framework - YII
+6. The URL structure can be better formatted for use in practical applications.
