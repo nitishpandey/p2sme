@@ -5,6 +5,23 @@ CREATE TABLE tbl_user (
     email VARCHAR(128) NOT NULL
 );
 
+CREATE TABLE tbl_service_form (
+    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(128) NOT NULL,
+    service_type VARCHAR(128) NOT NULL,
+    quantity INTEGER NOT NULL,
+    mobile_number VARCHAR(30) NOT NULL,
+    email VARCHAR(128) NOT NULL,
+    status BOOLEAN DEFAULT FALSE
+);
+
+CREATE TABLE tbl_mobile_activation (
+    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    code INTEGER NOT NULL,
+    expiry_time DATETIME NOT NULL,
+    service_form_id INTEGER NOT NULL
+);
+
 INSERT INTO tbl_user (username, password, email) VALUES ('test1', 'pass1', 'test1@example.com');
 INSERT INTO tbl_user (username, password, email) VALUES ('test2', 'pass2', 'test2@example.com');
 INSERT INTO tbl_user (username, password, email) VALUES ('test3', 'pass3', 'test3@example.com');

@@ -1,0 +1,418 @@
+2014/05/25 12:44:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /var/www/p2sme/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/p2sme/yii/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/p2sme/yii/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/p2sme/yii/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/p2sme/yii/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /var/www/p2sme/yii/framework/gii/generators/model/ModelCode.php(60): CModule->__get('db')
+#5 /var/www/p2sme/yii/framework/web/CFormModel.php(39): ModelCode->init()
+#6 /var/www/p2sme/yii/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /var/www/p2sme/yii/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /var/www/p2sme/yii/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /var/www/p2sme/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/p2sme/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/p2sme/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/p2sme/p2sme/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/p2sme/p2sme/index.php?r=gii/model/index
+HTTP_REFERER=http://localhost/p2sme/p2sme/index.php?r=gii/default/index
+---
+2014/05/25 12:48:19 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schema.mysql' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `schema`.`mysql`.
+in /var/www/p2sme/p2sme/index.php (13)
+2014/05/25 16:32:10 [error] [php] urlencode() expects parameter 1 to be string, object given (/var/www/p2sme/yii/framework/web/CUrlManager.php:440)
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/CUrlManager.php(310): CUrlManager->createUrlDefault()
+#1 /var/www/p2sme/yii/framework/base/CApplication.php(543): CUrlManager->createUrl()
+#2 /var/www/p2sme/yii/framework/web/CController.php(967): CWebApplication->createUrl()
+#3 /var/www/p2sme/yii/framework/web/CController.php(1028): ServiceFormController->createUrl()
+#4 /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php(75): ServiceFormController->redirect()
+#5 /var/www/p2sme/yii/framework/web/actions/CInlineAction.php(49): ServiceFormController->actionCreate()
+#6 /var/www/p2sme/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(133): ServiceFormController->runAction()
+#8 /var/www/p2sme/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/p2sme/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): ServiceFormController->filterAccessControl()
+#11 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/p2sme/yii/framework/web/CController.php(265): ServiceFormController->runActionWithFilters()
+#14 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): ServiceFormController->run()
+#15 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/p2sme/p2sme/index.php(13): CWebApplication->run()
+REQUEST_URI=/p2sme/p2sme/index.php?r=serviceForm/create
+in /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php (75)
+in /var/www/p2sme/p2sme/index.php (13)
+2014/05/25 16:34:51 [error] [exception.CException] exception 'CException' with message 'Property "TblMobileActivation.name" is not defined.' in /var/www/p2sme/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/p2sme/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /var/www/p2sme/yii/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('name')
+#2 /var/www/p2sme/yii/framework/web/helpers/CHtml.php(2252): CHtml::resolveValue(Object(TblMobileActivation), 'name')
+#3 /var/www/p2sme/yii/framework/web/helpers/CHtml.php(1434): CHtml::activeInputField('text', Object(TblMobileActivation), 'name', Array)
+#4 /var/www/p2sme/p2sme/protected/views/serviceForm/create.php(26): CHtml::activeTextField(Object(TblMobileActivation), 'name')
+#5 /var/www/p2sme/yii/framework/web/CBaseController.php(126): require('/var/www/p2sme/...')
+#6 /var/www/p2sme/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/p2sme/...', Array, true)
+#7 /var/www/p2sme/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/p2sme/...', Array, true)
+#8 /var/www/p2sme/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#9 /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php(75): CController->render('create', Array)
+#10 /var/www/p2sme/yii/framework/web/actions/CInlineAction.php(49): ServiceFormController->actionCreate()
+#11 /var/www/p2sme/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /var/www/p2sme/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/p2sme/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/p2sme/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#20 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('serviceForm/cre...')
+#21 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/p2sme/p2sme/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/p2sme/p2sme/index.php?r=serviceForm/create
+HTTP_REFERER=http://localhost/p2sme/p2sme/index.php?r=serviceForm/create
+---
+2014/05/25 17:21:34 [error] [exception.CException] exception 'CException' with message 'ServiceFormController cannot find the requested view "mobileActivation/create".' in /var/www/p2sme/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/CController.php(782): CController->renderPartial('mobileActivatio...', Array, true)
+#1 /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php(75): CController->render('mobileActivatio...', Array)
+#2 /var/www/p2sme/yii/framework/web/actions/CInlineAction.php(49): ServiceFormController->actionCreate()
+#3 /var/www/p2sme/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/p2sme/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/p2sme/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/p2sme/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('serviceForm/cre...')
+#13 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/p2sme/p2sme/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/p2sme/p2sme/index.php?r=serviceForm/create
+HTTP_REFERER=http://localhost/p2sme/p2sme/index.php?r=serviceForm/create
+---
+2014/05/25 17:47:36 [error] [exception.CException] exception 'CException' with message 'ServiceFormController cannot find the requested view "mobileActivation/create".' in /var/www/p2sme/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/CController.php(782): CController->renderPartial('mobileActivatio...', Array, true)
+#1 /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php(75): CController->render('mobileActivatio...', Array)
+#2 /var/www/p2sme/yii/framework/web/actions/CInlineAction.php(49): ServiceFormController->actionCreate()
+#3 /var/www/p2sme/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/p2sme/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/p2sme/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/p2sme/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('serviceForm/cre...')
+#13 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/p2sme/p2sme/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/p2sme/p2sme/index.php?r=serviceForm/create
+HTTP_REFERER=http://localhost/p2sme/p2sme/index.php?r=serviceForm/create
+---
+2014/05/25 17:49:37 [error] [php] urlencode() expects parameter 1 to be string, object given (/var/www/p2sme/yii/framework/web/CUrlManager.php:440)
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/CUrlManager.php(310): CUrlManager->createUrlDefault()
+#1 /var/www/p2sme/yii/framework/base/CApplication.php(543): CUrlManager->createUrl()
+#2 /var/www/p2sme/yii/framework/web/CController.php(967): CWebApplication->createUrl()
+#3 /var/www/p2sme/yii/framework/web/CController.php(1028): ServiceFormController->createUrl()
+#4 /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php(75): ServiceFormController->redirect()
+#5 /var/www/p2sme/yii/framework/web/actions/CInlineAction.php(49): ServiceFormController->actionCreate()
+#6 /var/www/p2sme/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(133): ServiceFormController->runAction()
+#8 /var/www/p2sme/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/p2sme/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): ServiceFormController->filterAccessControl()
+#11 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/p2sme/yii/framework/web/CController.php(265): ServiceFormController->runActionWithFilters()
+#14 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): ServiceFormController->run()
+#15 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/p2sme/p2sme/index.php(13): CWebApplication->run()
+REQUEST_URI=/p2sme/p2sme/index.php?r=serviceForm/create
+in /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php (75)
+in /var/www/p2sme/p2sme/index.php (13)
+2014/05/25 19:53:11 [error] [php] Use of undefined constant id - assumed 'id' (/var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php:80)
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(133): ServiceFormController->runAction()
+#1 /var/www/p2sme/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/p2sme/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): ServiceFormController->filterAccessControl()
+#4 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/p2sme/yii/framework/web/CController.php(265): ServiceFormController->runActionWithFilters()
+#7 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): ServiceFormController->run()
+#8 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/p2sme/p2sme/index.php(13): CWebApplication->run()
+REQUEST_URI=/p2sme/p2sme/index.php?r=serviceForm/create
+in /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php (80)
+in /var/www/p2sme/p2sme/index.php (13)
+2014/05/25 20:20:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mobileValidation/view".' in /var/www/p2sme/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mobileValidatio...')
+#1 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/p2sme/p2sme/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/p2sme/p2sme/index.php?r=mobileValidation/view&id=5
+HTTP_REFERER=http://localhost/p2sme/p2sme/index.php?r=serviceForm/create
+---
+2014/05/25 20:20:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mobileValidation/create".' in /var/www/p2sme/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mobileValidatio...')
+#1 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/p2sme/p2sme/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/p2sme/p2sme/index.php?r=mobileValidation/create
+---
+2014/05/25 20:21:12 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/p2sme/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/p2sme/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/p2sme/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/p2sme/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mobileActivatio...')
+#10 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/p2sme/p2sme/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/p2sme/p2sme/index.php?r=mobileActivation/view
+---
+2014/05/25 20:36:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "mobileValidate".' in /var/www/p2sme/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/CController.php(270): CController->missingAction('mobileValidate')
+#1 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): CController->run('mobileValidate')
+#2 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mobileActivatio...')
+#3 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/p2sme/p2sme/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/p2sme/p2sme/index.php?r=mobileActivation/mobileValidate&id=8
+HTTP_REFERER=http://localhost/p2sme/p2sme/index.php?r=serviceForm/create
+---
+2014/05/25 20:37:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "mobileValidate".' in /var/www/p2sme/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/CController.php(270): CController->missingAction('mobileValidate')
+#1 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): CController->run('mobileValidate')
+#2 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mobileActivatio...')
+#3 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/p2sme/p2sme/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/p2sme/p2sme/index.php?r=mobileActivation/mobileValidate&id=8
+---
+2014/05/25 20:37:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/p2sme/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/p2sme/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/p2sme/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/p2sme/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): CController->run('validate')
+#8 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mobileActivatio...')
+#9 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/p2sme/p2sme/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/p2sme/p2sme/index.php?r=mobileActivation/validate&id=8
+---
+2014/05/25 21:55:21 [error] [php] Undefined index: TblMobileActivation (/var/www/p2sme/p2sme/protected/controllers/MobileActivationController.php:61)
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /var/www/p2sme/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(133): MobileActivationController->runAction()
+#3 /var/www/p2sme/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/p2sme/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): MobileActivationController->filterAccessControl()
+#6 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/p2sme/yii/framework/web/CController.php(265): MobileActivationController->runActionWithFilters()
+#9 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): MobileActivationController->run()
+#10 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/p2sme/p2sme/index.php(13): CWebApplication->run()
+REQUEST_URI=/p2sme/p2sme/index.php?r=mobileActivation/mvalidate&id=8
+in /var/www/p2sme/p2sme/protected/controllers/MobileActivationController.php (61)
+in /var/www/p2sme/p2sme/index.php (13)
+2014/05/25 22:20:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/p2sme/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/p2sme/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/p2sme/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/p2sme/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): CController->run('success')
+#8 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('mobileActivatio...')
+#9 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/p2sme/p2sme/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/p2sme/p2sme/index.php?r=mobileActivation/success&id=27
+HTTP_REFERER=http://localhost/p2sme/p2sme/index.php?r=mobileActivation/mvalidate&id=8
+---
+2014/05/25 22:20:40 [error] [php] Use of undefined constant id - assumed 'id' (/var/www/p2sme/p2sme/protected/views/mobileActivation/success.php:6)
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/CController.php(869): MobileActivationController->renderFile()
+#1 /var/www/p2sme/yii/framework/web/CController.php(782): MobileActivationController->renderPartial()
+#2 /var/www/p2sme/p2sme/protected/controllers/MobileActivationController.php(79): MobileActivationController->render()
+#3 unknown(0): MobileActivationController->actionSuccess()
+#4 /var/www/p2sme/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/p2sme/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/p2sme/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(133): MobileActivationController->runAction()
+#8 /var/www/p2sme/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/p2sme/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): MobileActivationController->filterAccessControl()
+#11 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/p2sme/yii/framework/web/CController.php(265): MobileActivationController->runActionWithFilters()
+#14 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): MobileActivationController->run()
+#15 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/p2sme/p2sme/index.php(13): CWebApplication->run()
+REQUEST_URI=/p2sme/p2sme/index.php?r=mobileActivation/success&id=27
+in /var/www/p2sme/p2sme/protected/views/mobileActivation/success.php (6)
+in /var/www/p2sme/p2sme/protected/controllers/MobileActivationController.php (79)
+in /var/www/p2sme/p2sme/index.php (13)
+2014/05/25 22:32:35 [error] [php] Undefined variable: s (/var/www/p2sme/p2sme/protected/views/serviceForm/view.php:18)
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/CController.php(869): ServiceFormController->renderFile()
+#1 /var/www/p2sme/yii/framework/web/CController.php(782): ServiceFormController->renderPartial()
+#2 /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php(53): ServiceFormController->render()
+#3 unknown(0): ServiceFormController->actionView()
+#4 /var/www/p2sme/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/p2sme/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/p2sme/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(133): ServiceFormController->runAction()
+#8 /var/www/p2sme/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/p2sme/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): ServiceFormController->filterAccessControl()
+#11 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/p2sme/yii/framework/web/CController.php(265): ServiceFormController->runActionWithFilters()
+#14 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): ServiceFormController->run()
+#15 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/p2sme/p2sme/index.php(13): CWebApplication->run()
+REQUEST_URI=/p2sme/p2sme/index.php?r=serviceForm/view&id=27&s=success
+in /var/www/p2sme/p2sme/protected/views/serviceForm/view.php (18)
+in /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php (53)
+in /var/www/p2sme/p2sme/index.php (13)
+2014/05/25 22:32:51 [error] [php] Undefined variable: s (/var/www/p2sme/p2sme/protected/views/serviceForm/view.php:18)
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/CController.php(869): ServiceFormController->renderFile()
+#1 /var/www/p2sme/yii/framework/web/CController.php(782): ServiceFormController->renderPartial()
+#2 /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php(53): ServiceFormController->render()
+#3 unknown(0): ServiceFormController->actionView()
+#4 /var/www/p2sme/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/p2sme/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/p2sme/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(133): ServiceFormController->runAction()
+#8 /var/www/p2sme/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/p2sme/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): ServiceFormController->filterAccessControl()
+#11 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/p2sme/yii/framework/web/CController.php(265): ServiceFormController->runActionWithFilters()
+#14 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): ServiceFormController->run()
+#15 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/p2sme/p2sme/index.php(13): CWebApplication->run()
+REQUEST_URI=/p2sme/p2sme/index.php?r=serviceForm/view&id=27&s=success
+in /var/www/p2sme/p2sme/protected/views/serviceForm/view.php (18)
+in /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php (53)
+in /var/www/p2sme/p2sme/index.php (13)
+2014/05/25 22:34:29 [error] [php] Undefined variable: s (/var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php:51)
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /var/www/p2sme/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(133): ServiceFormController->runAction()
+#3 /var/www/p2sme/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/p2sme/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): ServiceFormController->filterAccessControl()
+#6 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/p2sme/yii/framework/web/CController.php(265): ServiceFormController->runActionWithFilters()
+#9 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): ServiceFormController->run()
+#10 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/p2sme/p2sme/index.php(13): CWebApplication->run()
+REQUEST_URI=/p2sme/p2sme/index.php?r=serviceForm/view&id=27&s=success
+in /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php (51)
+in /var/www/p2sme/p2sme/index.php (13)
+2014/05/25 22:34:42 [error] [php] Undefined variable: s (/var/www/p2sme/p2sme/protected/views/serviceForm/view.php:18)
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/CController.php(869): ServiceFormController->renderFile()
+#1 /var/www/p2sme/yii/framework/web/CController.php(782): ServiceFormController->renderPartial()
+#2 /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php(54): ServiceFormController->render()
+#3 unknown(0): ServiceFormController->actionView()
+#4 /var/www/p2sme/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/p2sme/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/p2sme/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(133): ServiceFormController->runAction()
+#8 /var/www/p2sme/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/p2sme/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): ServiceFormController->filterAccessControl()
+#11 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/p2sme/yii/framework/web/CController.php(265): ServiceFormController->runActionWithFilters()
+#14 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): ServiceFormController->run()
+#15 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/p2sme/p2sme/index.php(13): CWebApplication->run()
+REQUEST_URI=/p2sme/p2sme/index.php?r=serviceForm/view&id=27&s=success
+in /var/www/p2sme/p2sme/protected/views/serviceForm/view.php (18)
+in /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php (54)
+in /var/www/p2sme/p2sme/index.php (13)
+2014/05/25 22:35:11 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/p2sme/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/p2sme/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/p2sme/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/p2sme/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('serviceForm/vie...')
+#10 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/p2sme/p2sme/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/p2sme/p2sme/index.php?r=serviceForm/view&id=27
+---
+2014/05/25 22:57:37 [error] [php] Undefined variable: s (/var/www/p2sme/p2sme/protected/views/serviceForm/view.php:18)
+Stack trace:
+#0 /var/www/p2sme/yii/framework/web/CController.php(869): ServiceFormController->renderFile()
+#1 /var/www/p2sme/yii/framework/web/CController.php(782): ServiceFormController->renderPartial()
+#2 /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php(66): ServiceFormController->render()
+#3 unknown(0): ServiceFormController->actionMobileValidationSuccess()
+#4 /var/www/p2sme/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /var/www/p2sme/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /var/www/p2sme/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(133): ServiceFormController->runAction()
+#8 /var/www/p2sme/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/p2sme/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /var/www/p2sme/yii/framework/web/filters/CInlineFilter.php(58): ServiceFormController->filterAccessControl()
+#11 /var/www/p2sme/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /var/www/p2sme/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/p2sme/yii/framework/web/CController.php(265): ServiceFormController->runActionWithFilters()
+#14 /var/www/p2sme/yii/framework/web/CWebApplication.php(282): ServiceFormController->run()
+#15 /var/www/p2sme/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /var/www/p2sme/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/p2sme/p2sme/index.php(13): CWebApplication->run()
+REQUEST_URI=/p2sme/p2sme/index.php?r=serviceForm/mobileValidationSuccess&id=27&s=success
+in /var/www/p2sme/p2sme/protected/views/serviceForm/view.php (18)
+in /var/www/p2sme/p2sme/protected/controllers/ServiceFormController.php (66)
+in /var/www/p2sme/p2sme/index.php (13)
